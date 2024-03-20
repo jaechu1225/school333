@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        function checkAnswers() {
+            // 사용자가 입력한 답변 가져오기
+            var answer1 = document.getElementById('answer1').value.trim().toLowerCase();
+            var answer2 = document.getElementById('answer2').value.trim().toLowerCase();
+            var answer3 = document.getElementById('answer3').value.trim().toLowerCase();
+	var answer4 = document.getElementById('answer3').value.trim().toLowerCase();
+            
+            // 정답과 비교
+            var correctAnswer1 = "높이";
+            var correctAnswer2 = "화자가추구하는것강조";
+            var correctAnswer3 = "색채";
+	var correctAnswer4 = "감사합니다";
+
+            var resultElement = document.getElementById('result');
+
+            if (answer1 === correctAnswer1 && answer2 === correctAnswer2 && answer3 === correctAnswer3) {
+                resultElement.textContent = "정답입니다!";
+            } else {
+                resultElement.textContent = "틀렸습니다. 다시 시도해보세요.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Q1.고고함, 정신적 의지를 표현한 시어는?</h1>
+    <label for="answer1">답변 1:</label>
+    <input type="text" id="answer1"><br><br>
+    <h2>Q2.'기다려야만 한다'를 반복함으로 얻을 수 있는 효과는?(띄어쓰기 없이 10글자)</h2>
+    <label for="answer2">답변 2:</label>
+    <input type="text" id="answer2"><br><br>
+    <h3>Q3.눈과 장밋빛 햇살이란 표현에서는 ㅁㅁ의 대조를 확인할 수 있다. ㅁㅁ에 들어갈 말은?</h3>
+    <label for="answer3">답변 3:</label>
+    <input type="text" id="answer3"><br><br>
+    <h4>Q4.발표자가 발표를 끝내면서 말 한 문장은? (5글자)</h4>
+    <label for="answer3">답변 4:</label>
+    <input type="text" id="answer3"><br><br>
+
+    <button onclick="checkAnswers()">정답 확인</button>
+
+    <p id="result"></p>
+</body>
+</html>
+
+
