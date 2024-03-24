@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <style>
+        body {
+            font-size: 16px; 
+        }
+        h1, h2, h3, h4, h5, h6, p, label, input, button {
+            font-size: inherit; 
+        }
+    </style>
     <script>
         function checkAnswers() {
             var answer1 = document.getElementById('answer1').value.trim().toLowerCase();
             var answer2 = document.getElementById('answer2').value.trim().toLowerCase();
             var answer3 = document.getElementById('answer3').value.trim().toLowerCase();
-	    var answer4 = document.getElementById('answer4').value.trim().toLowerCase();
-	    var answer5 = document.getElementById('answer5').value.trim().toLowerCase();
+            var answer4 = document.getElementById('answer4').value.trim().toLowerCase();
+            var answer5 = document.getElementById('answer5').value.trim().toLowerCase();
             
             // 정답과 비교
             var correctAnswer1 = "높이";
             var correctAnswer2 = "화자가추구하는것강조";
             var correctAnswer3 = "색채";
-	    var correctAnswer4 = "청량산에서1";
-            var correctAnswer4 = "감사합니다";
+            var correctAnswer4 = "청량산에서1";
+            var correctAnswer5 = "감사합니다";
             var resultElement = document.getElementById('result');
 
-            if (answer1 === correctAnswer1 && answer2 === correctAnswer2 && answer3 === correctAnswer3) {
-                resultElement.textContent = "정답입니다!";
+            if (answer1 === correctAnswer1 && answer2 === correctAnswer2 && answer3 === correctAnswer3 && answer4 === correctAnswer4 && answer5 === correctAnswer5) {
+                resultElement.textContent = "정답입니다! 수업시간이 끝난 후 이 화면 그대로 저에게 가져오시면 작은 간식을 드리겠습니다! 들어주셔서 감사합니다!(선착순)";
             } else {
                 resultElement.textContent = "틀렸습니다. 다시 시도해보세요.";
             }
@@ -29,6 +37,7 @@
     </script>
 </head>
 <body>
+      
     <h1>Q1.고고함, 정신적 의지를 표현한 시어는?</h1>
     <label for="answer1">답변 1:</label>
     <input type="text" id="answer1"><br><br>
@@ -39,16 +48,15 @@
     <label for="answer3">답변 3:</label>
     <input type="text" id="answer3"><br><br>
     <h4>Q4.고고란 시의 전통성에 대해서 이해하기 위해 가져온 시의 제목은? (띄어쓰기없이 5글자)</h4>
-    <label for="answer3">답변 4:</label>
-    <input type="text" id="answer3"><br><br>
-    <h5>Q5.발표자가 발표를 끝내면서 말 한 문장은? (5글자)</h4>
-    <label for="answer3">답변 5:</label>
-    <input type="text" id="answer3"><br><br>
+    <label for="answer4">답변 4:</label>
+    <input type="text" id="answer4"><br><br>
+    <h5>Q5.발표자가 발표를 끝내면서 말 한 문장은? (5글자)</h5>
+    <label for="answer5">답변 5:</label>
+    <input type="text" id="answer5"><br><br>
 
     <button onclick="checkAnswers()">정답 확인</button>
 
     <p id="result"></p>
 </body>
 </html>
-
 
